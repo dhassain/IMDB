@@ -1,13 +1,37 @@
 package com.movie.IMDB.rating;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Movie {
+
+    @Id //representing as a Primary Key
+    @GeneratedValue(strategy = GenerationType.AUTO) //auto-generates values one by one for Id integer.
     private Integer id;
     private String movieName;
     private String movieDescription;
 
 //----------constructor------------------
 //Constructor has the same name as the class name
+
+    @Override
+    public String toString() { //JSON .. looks like an object but it's not an object .. coz "Moive{"
+        return "Movie{" +
+                "id=" + id +
+                ", movieName='" + movieName + '\'' +
+                ", movieDescription='" + movieDescription + '\'' +
+                '}';
+    }
+
+    public Movie(){
+        this.id = 0;
+        this.movieName = "";
+        this.movieDescription = "";
+    }
     public Movie(String movieName, String movieDescription, int id){
         //'this' keywords represents current context of java class
         this.id = id;
