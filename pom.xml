@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Movie</groupId>
-	<artifactId>IMDB</artifactId>
+	<artifactId>LNC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>IMDB</name>
-	<description>IMDB movie rating</description>
+	<name>LNC</name>
+	<description>IMDB learner rating</description>
 
 	<!-- If we add parent, then we don't need to mention version number in any of the dependencies -->
 
@@ -55,14 +55,15 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<!-- ## STOP Database-->
-		<!-- ## START REST -->
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.9.7</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.2.0.CR2</version>
+			<type>pom</type>
 		</dependency>
-		<!-- ## STOP REST -->
+
 	</dependencies>
 	<build>
 		<!-- START Build time dependency -->

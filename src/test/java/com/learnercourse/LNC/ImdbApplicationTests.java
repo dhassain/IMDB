@@ -1,4 +1,4 @@
-package com.movie.IMDB;
+package com.learnercourse.LNC;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
